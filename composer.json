@@ -1,0 +1,20 @@
+{
+    "name": "aquiver/php7",
+    "description": "fiches in php 7",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Potochilov Taras",
+            "email": "888rayon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "classes\\": "classes"
+        }
+    },
+    "require": {
+        "stil/gd-text": "^1.1"
+    }
+}
