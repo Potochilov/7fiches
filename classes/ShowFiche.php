@@ -92,14 +92,14 @@ class ShowFiche {
 
 			return $this->showData;
 		} else if ( $this->fiche === 'is_countable' ) {
-			$imgpp          = new GenerateImage( 'is_countable' );
-			$this->showData = $imgpp->img;
-			$this->showData .= "<div><br><br>Если вы в PHP 7.2. вызываете count() с использованием не-countable переменной, то PHP выведет предупреждение об этом. <br>В общих правках было предложение проверять получаемую переменную на countable до ее использования в count(). <br>countable-переменной является массив или объект реализующий \Countable интерфейс. Так как при проверке будет использоваться много шаблонного кода, в PHP 7.3 появилась новая функция is_countable(), проверяющая переменную на… ну… возможность использования с count():</div>";
-			$this->showData .= "<div><br><br>Рассмотрим на примере:<br><br></div>";
-			$this->showData .= "<code>\$example_arr = ['one', 'two', 'three']; <br>if (is_countable(\$example_arr)) { <br> return count(\$example_arr); <br>}  else { <br>return \$example_arr . 'is not countable';<br>} </code>";
-			$example_arr = ['one', 'two', 'three'];
-			$check_countable = is_countable($example_arr) ? count($example_arr) : $example_arr;
-            $this->showData .= "<div><br><br>Результатом данного примера будет: " . $check_countable . "</div>";
+			$imgpp           = new GenerateImage( 'is_countable' );
+			$this->showData  = $imgpp->img;
+			$this->showData  .= "<div><br><br>Если вы в PHP 7.2. вызываете count() с использованием не-countable переменной, то PHP выведет предупреждение об этом. <br>В общих правках было предложение проверять получаемую переменную на countable до ее использования в count(). <br>countable-переменной является массив или объект реализующий \Countable интерфейс. Так как при проверке будет использоваться много шаблонного кода, в PHP 7.3 появилась новая функция is_countable(), проверяющая переменную на… ну… возможность использования с count():</div>";
+			$this->showData  .= "<div><br><br>Рассмотрим на примере:<br><br></div>";
+			$this->showData  .= "<code>\$example_arr = ['one', 'two', 'three']; <br>if (is_countable(\$example_arr)) { <br> return count(\$example_arr); <br>}  else { <br>return \$example_arr . 'is not countable';<br>} </code>";
+			$example_arr     = [ 'one', 'two', 'three' ];
+			$check_countable = is_countable( $example_arr ) ? count( $example_arr ) : $example_arr;
+			$this->showData  .= "<div><br><br>Результатом данного примера будет: " . $check_countable . "</div>";
 
 			return $this->showData;
 		} else {
